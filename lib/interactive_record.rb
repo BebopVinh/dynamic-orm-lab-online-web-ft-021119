@@ -14,5 +14,6 @@ class InteractiveRecord
 
     table_info = DB[:conn].execute(sql)
     binding.pry
+    column_names = table_info.map {|row| row["name"]}
   end
 end
