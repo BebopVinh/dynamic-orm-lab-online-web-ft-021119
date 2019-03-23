@@ -14,7 +14,7 @@ class InteractiveRecord
 
     table_info = DB[:conn].execute(sql)
     column_names = table_info.map {|row| row["name"]}
-    column_names.compact!
+    column_names.compact
   end
 
   def initialize(options = {})
