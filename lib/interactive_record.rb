@@ -14,7 +14,7 @@ class InteractiveRecord
 
     table_info = DB[:conn].execute(sql)
     column_names = table_info.map {|row| row["name"]}
-    column_names.compact.delete_if {|name| name == "id"}
+    x = column_names.compact.delete_if {|name| name == "id"}
     binding.pry
   end
 end
