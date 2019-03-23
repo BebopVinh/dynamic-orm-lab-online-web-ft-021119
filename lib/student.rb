@@ -6,7 +6,6 @@ class Student < InteractiveRecord
 
   #method to declare abstractive attr_accessor
   self.column_names.each do |name|
-    binding.pry
     attr_accessor name.to_sym
   end
 
