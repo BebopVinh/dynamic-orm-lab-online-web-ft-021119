@@ -36,6 +36,7 @@ class InteractiveRecord
       "#{send(col_name)}" unless send(col_name).nil?
     end
     x = values.compact.join(", ")
+    binding.pry
   end
 
 end
