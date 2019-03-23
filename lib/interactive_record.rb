@@ -35,7 +35,7 @@ class InteractiveRecord
     values = self.class.column_names.map do |col_name|
       "#{send(col_name)}" unless send(col_name).nil?
     end
-    binding.pry
+    x = values.compact.join(", ")
   end
 
 end
