@@ -32,6 +32,9 @@ class InteractiveRecord
   end
 
   def values_for_insert
+    values = self.class.column_names.map do |col_name|
+      "'#{send(col_name)}'" unless send(col_name).nil?
+    end
     binding.pry
   end
 
