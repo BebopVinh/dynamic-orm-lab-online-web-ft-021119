@@ -38,4 +38,10 @@ class InteractiveRecord
     x = values.compact.join(", ")
   end
 
+  def save
+    sql = <<-SQL
+      INSERT INTO #{table_name_for_insert}
+    SQL
+  end
+
 end
